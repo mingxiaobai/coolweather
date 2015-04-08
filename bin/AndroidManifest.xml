@@ -24,6 +24,8 @@
             </intent-filter>
         </activity>
         <activity android:name="com.doo.cooweather.activity.WeatherActivity"></activity>
+        <service android:name="com.doo.cooweather.service.AutoUpdateService"></service>
+        <receiver android:name="com.doo.cooweather.receiver.AutoUpdateReceiver"></receiver>
     </application>
 
 </manifest>

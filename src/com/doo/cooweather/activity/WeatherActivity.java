@@ -1,6 +1,7 @@
 package com.doo.cooweather.activity;
 
 import com.doo.cooweather.R;
+import com.doo.cooweather.service.AutoUpdateService;
 import com.doo.cooweather.util.HttpCallbackListener;
 import com.doo.cooweather.util.HttpUtil;
 import com.doo.cooweather.util.Utility;
@@ -101,6 +102,8 @@ public class WeatherActivity extends Activity implements OnClickListener {
 		currentDateText.setText(prefs.getString("current_date", ""));
 		weatherInfoLayout.setVisibility(View.VISIBLE);
 		cityNameText.setVisibility(View.VISIBLE);
+		Intent intent = new Intent(this,AutoUpdateService.class);
+		startService(intent);
 	}
 
 	/**
