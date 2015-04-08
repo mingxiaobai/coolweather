@@ -62,6 +62,13 @@ public class Utility {
 		return false;
 	}
 	
+	/**
+	 * 解析和处理服务器返回的县级数据
+	 * @param coolWeatherDB
+	 * @param response
+	 * @param cityId
+	 * @return
+	 */
 	public static boolean handleCountiesResponse(CoolWeatherDB coolWeatherDB, String response, int cityId){
 		
 		if (!TextUtils.isEmpty(response)) {
